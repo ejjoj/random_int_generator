@@ -1,0 +1,30 @@
+import java.util.Random;
+import java.util.Scanner;
+public static Main {
+public static void main String[] args {
+        Scanner odczyt = new Scanner(System.in);
+        Random generator = new Random();
+        System.out.println("Program losuje liczby całkowite.");
+        final int MAX = 100;
+        final int MIN = 1;
+        double wylosowana = generator.nextInt(MIN+MAX);
+        System.out.print("Twoja wylosowana liczba: " +wylosowana);
+        boolean przerwa = false;
+        while (przerwa == false)
+        {
+            System.out.print("\nCzy chcesz wylosować kolejną?: ");
+            String pytanie = odczyt.nextLine();
+            if (pytanie.equals("nie"))
+            {
+                przerwa = true;
+                System.out.println("Program zakończył działanie.");
+            }else if (pytanie.equals("tak"))
+                {
+                double wylosowana1 = generator.nextInt(MIN+MAX);
+                System.out.print("Kolejna liczba: " +wylosowana1);
+                }else System.out.println("Niepoprawny znak! Wpisz: \"tak\" lub \"nie\".");
+
+
+        }
+}
+}
