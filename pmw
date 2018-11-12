@@ -4,25 +4,25 @@ public static Main {
 public static void main String[] args {
         Scanner odczyt = new Scanner(System.in);
         Random generator = new Random();
-        System.out.println("Program losuje liczby całkowite.");
+        System.out.println("Program is genearting integers.");
         final int MAX = 100;
         final int MIN = 1;
-        double wylosowana = generator.nextInt(MIN+MAX);
-        System.out.print("Twoja wylosowana liczba: " +wylosowana);
-        boolean przerwa = false;
-        while (przerwa == false)
+        double drawn = generator.nextInt(MIN+MAX);
+        System.out.print("Drawn integer: " +drawn);
+        boolean break = false;
+        while (break == false)
         {
-            System.out.print("\nCzy chcesz wylosować kolejną?: ");
-            String pytanie = odczyt.nextLine();
-            if (pytanie.equals("nie"))
+            System.out.print("\nDo you want to generate new one?: ");
+            String ask = odczyt.nextLine();
+            if (ask.equals("no"))
             {
-                przerwa = true;
-                System.out.println("Program zakończył działanie.");
-            }else if (pytanie.equals("tak"))
+                break = true;
+                System.out.println("Program has stopped.");
+            }else if (ask.equals("yes"))
                 {
-                double wylosowana1 = generator.nextInt(MIN+MAX);
-                System.out.print("Kolejna liczba: " +wylosowana1);
-                }else System.out.println("Niepoprawny znak! Wpisz: \"tak\" lub \"nie\".");
+                double drawn1 = generator.nextInt(MIN+MAX);
+                System.out.print("Next integer: " +drawn1);
+                }else System.out.println("Uknown phrase! Type: \"yes\" or \"no\".");
 
 
         }
